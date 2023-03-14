@@ -34,13 +34,7 @@ body {
   margin: 0;
   font-family: "M PLUS 1p", sans-serif;
   background-color: #fcfbf9 !important;
-  /* color: rgba(255, 255, 255, 0.5); */
   height: 100vh;
-}
-
-a {
-  text-decoration: none !important;
-  color: rgba(255, 255, 255, 0.5);
 }
 
 nav .global {
@@ -69,9 +63,32 @@ nav.global div.main.left li {
   margin-right: 24px;
 }
 
-nav.global div.main li {
+nav.global div.container div.main ul li {
   float: left;
   margin-right: 30px;
+}
+
+nav.global div.container div.main ul li a {
+  line-height: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.075rem;
+  color: #000;
+  display: inline-block;
+  transition: color 1s cubic-bezier(0.28, 0, 0.18, 1);
+  position: relative;
+  font-weight: 500;
+}
+
+nav.global div.main li a:hover {
+  opacity: 1;
+}
+
+nav.global div.main li a:hover:after {
+  transition: transform 0.5s cubic-bezier(0.28, 0, 0.18, 1) 0.2s;
+  transform: translateX(-50%) scaleX(1);
 }
 
 .minHeightContainer {

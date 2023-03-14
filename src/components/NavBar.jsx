@@ -15,9 +15,11 @@ function NavBar() {
         >
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
-                SHOP
-              </a>
+              <Link to="/shop">
+                <a class="nav-link active" aria-current="page">
+                  SHOP
+                </a>
+              </Link>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
