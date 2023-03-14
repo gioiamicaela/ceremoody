@@ -7,87 +7,72 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
-    <Navbar expand="lg">
-      <Container>
-        <Link to="/">
-          <Navbar.Brand
-            style={{
-              color: "white",
-              fontWeight: "bold",
-              fontSize: "1.25rem",
-              fontFamily: "Barlow, sans-serif",
-            }}
-            className="text-center"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              className="bi bi-film me-2 align-text-center pb-1"
-              viewBox="0 0 16 16"
-              style={{ color: "red", height: "25", width: "25" }}
-            >
-              <path d="M0 1a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1zm4 0v6h8V1H4zm8 8H4v6h8V9zM1 1v2h2V1H1zm2 3H1v2h2V4zM1 7v2h2V7H1zm2 3H1v2h2v-2zm-2 3v2h2v-2H1zM15 1h-2v2h2V1zm-2 3v2h2V4h-2zm2 3h-2v2h2V7zm-2 3v2h2v-2h-2zm2 3h-2v2h2v-2z" />
-            </svg>
-            Hackflix
-          </Navbar.Brand>
-        </Link>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link
-              as={Link}
-              to={"/"}
-              style={{ color: "rgba(255,255,255,.5)" }}
-            >
-              Home
-            </Nav.Link>
-            <Nav.Link
-              as={Link}
-              to={"/about"}
-              style={{ color: "rgba(255,255,255,.5)" }}
-            >
-              About
-            </Nav.Link>
-            <Nav.Link
-              as={Link}
-              to={"/contact"}
-              style={{ color: "rgba(255,255,255,.5)" }}
-            >
-              Contact
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-          <Nav>
-            <NavDropdown
-              title={<span className=" my-auto">Search by</span>}
-              id="basic-nav-dropdown"
-              style={{
-                backgroundColor: "212529",
-                color: "rgba(255,255,255,.5)",
-              }}
-            >
-              <NavDropdown.Item
-                as={Link}
-                to={"/search-rating"}
-                id="nav-dropdown-search"
-              >
-                Search by rating
-              </NavDropdown.Item>
-              <NavDropdown.Item
-                as={Link}
-                to={"/search-title"}
-                id="nav-dropdown-search"
-              >
-                Search by title
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                SHOP
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                SUBSCRIPTION
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                WHOLESALE
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                COLD BREW
+              </a>
+            </li>
+          </ul>
+        </div>
+        <a class="navbar-brand" href="#">
+          Navbar
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                LOCATIONS
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                LEARN
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                ACCOUNT
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                COLD BREW
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   );
 }
 
