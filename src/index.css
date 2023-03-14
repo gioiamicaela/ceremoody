@@ -3,11 +3,38 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  position: absolute;
+  margin: 0;
+  padding: 0 !important;
+  top: 0 !important;
+  left: 0;
+  overflow: hidden;
+  width: 100vw;
+  background: #fcfbf9;
+  color: #222;
+  height: 100vh;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+html {
+  font-family: "M PLUS 1p", sans-serif;
+  font-size: 100%;
+  line-height: 1.2;
+  font-weight: 400;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-variant-ligatures: common-ligatures;
+  font-size: 16px;
+}
+
 body {
   margin: 0;
   font-family: "M PLUS 1p", sans-serif;
   background-color: #fcfbf9 !important;
-  color: rgba(255, 255, 255, 0.5);
+  /* color: rgba(255, 255, 255, 0.5); */
   height: 100vh;
 }
 
@@ -16,7 +43,7 @@ a {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.navGlobal {
+nav .global {
   position: relative;
   padding: 0 60px 30px;
   z-index: 100;
@@ -27,6 +54,24 @@ a {
 
 .navbar.fixed-top {
   top: 76px !important;
+}
+
+nav.global div.main.left {
+  float: left;
+}
+
+nav.global div.main {
+  position: relative;
+  margin-top: 60px;
+}
+
+nav.global div.main.left li {
+  margin-right: 24px;
+}
+
+nav.global div.main li {
+  float: left;
+  margin-right: 30px;
 }
 
 .minHeightContainer {
@@ -53,4 +98,20 @@ a {
 .carousel .slide .carousel-fade {
   position: fixed;
   top: 75px;
+}
+
+.carousel-item {
+  height: calc(100vh - 75px);
+}
+
+@media (max-width: 1280px) {
+  html {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 1440px) {
+  html {
+    font-size: 14px !important;
+  }
 }
